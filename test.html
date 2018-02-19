@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Strona RESTowa</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+ 
+<body>
+ 
+<div id="app">
+    <select id="wybor">
+        <option v-for="jeden in dane" v-bind:value="jeden._id.$oid">{{jeden.marka}}</option>
+      </select>
+ 
+          <button v-on:click="usun()">Usuń</button>
+        </div>
+<script>
+var jqxhr = $.ajax( "http://localhost" )
+  .done(function(a) {
+var app = new Vue({
+  el: '#app',
+  data: {
+    dane: a
+  },
+  methods: {
+    usun: function () {
+      alert("http://localhost/?/"+$( "#wybor option:selected" ).text());
+ 
+      $.ajax({
+  type: "DELETE",
+  url: "http://localhost/?/"+$( "#wybor option:selected" ).text(),
+  data: {}
+})
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  })
+  .fail(function() {
+    alert( "error" );
+  });
+    }
+  }
+})
+ 
+ 
+  })
+  .fail(function() {
+    alert( "error" );
+  });
+</script>  
+</body>
+</html>
