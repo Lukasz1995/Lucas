@@ -2,6 +2,9 @@
 /**
  * @SWG\Info(title="My First API", version="0.1")
  */
+
+
+//zmiana kodu by Mihau
 header('Access-Control-Allow-Origin: *');
 require_once 'limonade.php';
 /**
