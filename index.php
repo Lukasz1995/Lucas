@@ -6,6 +6,7 @@
 
 //zmiana kodu by Mihau
 // Małysz ty szujo najgorsza
+//  cokolwiek malyszku, tutaj by nie było napisane i tak mnie nie wywalisz z drużyny programerów hahah
 header('Access-Control-Allow-Origin: *');
 require_once 'limonade.php';
 /**
