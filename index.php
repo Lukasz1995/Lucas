@@ -6,11 +6,10 @@
 
 //zmiana kodu by Mihau
 // Małysz ty szujo najgorsza
-<<<<<<< HEAD
 // test xd
-=======
 //  cokolwiek malyszku, tutaj by nie było napisane i tak mnie nie wywalisz z drużyny programerów hahah
->>>>>>> 5d0ccf7e10944d6aae5967fc8cf9b384a7fed320
+
+//tak chcesz sie bawic zły człowieku????
 header('Access-Control-Allow-Origin: *');
 require_once 'limonade.php';
 /**
